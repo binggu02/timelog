@@ -2,11 +2,21 @@ package com.toyproject.timelog.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
+@RequestMapping("/")
 public class HomeController {
-    @GetMapping("/")
+    @GetMapping("")
     public String home() {
-        return "pages/home";
+        return "home";
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "pages/test";
+    }
+    
 }
